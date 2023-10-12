@@ -13,8 +13,9 @@
 
     <div class="container">
         <h1 class="display-1 text-center" style="color:hotpink">
-            Our Products    
+            Our Products
         </h1>
+        <hr style="width: 20%;background-color:hotpink;border:none;height:3px;margin:auto">
     </div>
 
 
