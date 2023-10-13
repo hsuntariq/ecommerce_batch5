@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\productController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/','welcome');
 Route::view('/add','pages.admin.add_product');
+Route::post('/insert',[productController::class,'insertData']);
+Route::get('/',[productController::class,'getData']);
