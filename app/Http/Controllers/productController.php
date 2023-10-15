@@ -28,4 +28,6 @@ class productController extends Controller
         return view('welcome',compact('product'));
     }
 
+
+
 }

@@ -11,13 +11,19 @@
         </a>
     </h3>
     <h3 class="text-dark text-decoration-none mb-3 px-3">
-        <a class="text-dark text-decoration-none" href="">
+        <a class="text-dark text-decoration-none" href="/add-product">
 
             <i class="bi bi-bag-plus"></i> Add Products
         </a>
     </h3>
     <h3 class="text-dark text-decoration-none mb-3 px-3">
-        <a class="text-dark text-decoration-none" href="">
+        <a class="text-dark text-decoration-none" href="/add-category">
+
+            <i class="bi bi-bookmarks"></i> Add Category
+        </a>
+    </h3>
+    <h3 class="text-dark text-decoration-none mb-3 px-3">
+        <a class="text-dark text-decoration-none" href="/view-product">
 
             <i class="bi bi-eye"></i> View Product
         </a>
