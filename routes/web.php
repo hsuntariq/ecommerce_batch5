@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\categoryController;
 use App\Http\Controllers\productController;
+use App\Models\Products;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +27,5 @@ Route::get('/',[productController::class,'getData']);
 Route::view('/add-category','pages.admin.add_category');
 Route::post('/insert-category',[categoryController::class,'addCategory']);
 Route::view('/view-product','pages.admin.view_products');
+Route::get('/view-product',[productController::class,'viewData']);
+Route::post('/delete-item/{id}',[productController::class,'deleteItem']);

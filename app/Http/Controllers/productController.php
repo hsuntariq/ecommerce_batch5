@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Products;
 use Illuminate\Http\Request;
 
@@ -11,6 +12,7 @@ class productController extends Controller
         $formFields = $req->validate([
             'name' => ['required','min:3','max:20'],
             'price' => ['required','min:3','max:5'],
+            'd_price' => ['required','min:3','max:5'],
             'description' => ['required','min:5'],
             'category' => ['required'],
             'image' => ['required','mimes:jpg,png'],
@@ -25,7 +27,20 @@ class productController extends Controller
     
     public function getData(){
         $product = Products::paginate(3);
-        return view('welcome',compact('product'));
+        $category = Category::all();
+        return view('welcome',compact('product','category'));
+    }
+
+    public function viewData(){
+        $products = Products::latest()->paginate(10);
+        return view('pages.admin.view_products',compact('products'));
+    }
+
+
+    public function deleteItem($id){
+        $item = Products::find($id);
+        $item->delete();
+        return back()->with('message','Item Deleted Successfully!!!');
     }
 
 

@@ -31,6 +31,13 @@
                         {{$message}}
                     </p>
                 @enderror
+                <label for="">Discounted Price</label>
+                <input name="d_price" type="number" class="my-2 form-control" placeholder="Discounted Price..." value="{{old('price')}}">
+                @error('d_price')
+                    <p class="text-danger fw-bolder">
+                        {{$message}}
+                    </p>
+                @enderror
                 <label for="">Product Description</label>
                 <input name="description" type="text" class="my-2 form-control" placeholder="Product Description..." value="{{old('description')}}">
                 @error('description')

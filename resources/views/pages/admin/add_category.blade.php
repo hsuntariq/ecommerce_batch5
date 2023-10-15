@@ -1,5 +1,6 @@
 <x-layout>
     <div class="d-flex">
+        <x-flash/>
         <x-admin_sidebar/>
         <div class="add_form w-50 mx-auto mt-3" >
         <form action="/insert-category" enctype="multipart/form-data" method="POST" style="border:2px solid pink;padding:0.7rem" class="rounded p-3">
